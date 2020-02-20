@@ -30,6 +30,7 @@ export class FilterComponent extends React.Component {
                     <PassengersModal />
                     <CustomizedSelects items={this.state.ddlFlightType} />
                 </div>
+                 
             </React.Fragment>
         )
     }

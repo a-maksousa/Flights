@@ -19,6 +19,7 @@ export class LandingPage extends React.Component {
                     <div className="col-md-1"></div>
                     <div className="col-md-10 searchCard">
                         <FilterComponent />
+                        
                     </div>
                     <div className="col-md-1"></div>
                 </div>
