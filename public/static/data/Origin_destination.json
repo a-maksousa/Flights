@@ -1,0 +1,17 @@
+{
+  "cities": [
+    {
+      "1": "USA",
+      "2": "Liverpool",
+      "3": "Harvard",
+      "4": "George"
+    }
+  ],
+  "airports": [
+    {
+      "5": "Heathrow Airport",
+      "6": "Amman Civil Airport",
+      "7":"London Stansted Airport"
+    }
+  ]
+}

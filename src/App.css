@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: unset;
 }
 
 .App-logo {
@@ -35,4 +35,74 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.imgHeader{
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+
+.searchCard{
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
+  height: 150px;
+  margin-top: 20px;
+}
+
+.inlineFilter{
+  display: inline-flex;
+}
+
+.flights-header {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.flights-header-txt {
+  color: #3c4043;
+  font: 400 56px/64px 'Google Sans Display',Roboto,Arial,sans-serif;
+  text-align: center;
+}
+
+.btnLink {
+  color: #333 ;
+  outline: none !important;
+  text-decoration: none !important;
+  border-radius: 5px;
+}
+
+.btnLink:hover {
+  color: #333;
+  /* background-color: #e6e6e6 !important; */
+}
+
+.btnLink:focus {
+  color: #333;
+}
+
+.lblPassenger {
+  align-self: center;
+  font-size: 16px;
+  flex-grow: 1;
+  margin: 0 8px;
+  min-width: 76px;
+}
+.lblSubPassenger {
+  color: rgba(0,0,0,.56);
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 6px;
+  padding:0px;
+  font-weight:bold;
+}
+
+.divPassFilter {
+  padding-bottom: 8px;
+  color: #3c4043;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 9px;
 }
