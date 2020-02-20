@@ -45,12 +45,17 @@
 .searchCard{
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
-  height: 150px;
+  /* height: 150px; */
   margin-top: 20px;
 }
 
 .inlineFilter{
   display: inline-flex;
+}
+
+.inlineMainFilter{
+  display: inline-flex;
+  margin-bottom: 50px;
 }
 
 .flights-header {
@@ -105,4 +110,31 @@
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 9px;
+}
+
+.DatePicker{
+    padding: 12px;
+    color: #3c4043;
+    font: 400 14px/20px Roboto, HelveticaNeue, Arial, sans-serif;
+    letter-spacing: 0.2px;
+    border: unset;
+}
+
+.dtmSpan{
+  border-left: 1px solid #dadce0;
+  height: 30px;
+  align-self: center;
+}
+
+.divDateBox{
+    border: 1px solid #dadce0;
+    padding: 0px;
+    border-radius: 4px;
+    display: inline-flex;
+}
+
+.dtmIcon{
+  color: #1a73e8;
+  margin: 12px;
+  margin-bottom: 0px;
 }

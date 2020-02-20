@@ -2,6 +2,8 @@ import React from "react"
 import axios from 'axios'
 import CustomizedSelects from "../Components/MaterialComponents/CustomizedSelects"
 import PassengersModal from "./MaterialComponents/PassengersModal"
+import { TravelDatePicker } from "./MaterialComponents/TravelDatePicker"
+import DateRangeIcon from '@material-ui/icons/DateRange';
 
 export class FilterComponent extends React.Component {
     constructor() {
@@ -30,7 +32,16 @@ export class FilterComponent extends React.Component {
                     <PassengersModal />
                     <CustomizedSelects items={this.state.ddlFlightType} />
                 </div>
-                 
+                <br />
+                <div className="inlineMainFilter">
+                    <div className="divDateBox">
+                        <DateRangeIcon className="dtmIcon" />
+                        <TravelDatePicker />
+                        <span class="dtmSpan"></span>
+                        <TravelDatePicker />
+                    </div>
+                </div>
+
             </React.Fragment>
         )
     }
