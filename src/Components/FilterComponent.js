@@ -12,7 +12,7 @@ export class FilterComponent extends React.Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         axios.get('static/data/ddlFlightType.json').then(response => {
             this.setState({ ddlFlightType: response })
         })
