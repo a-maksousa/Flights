@@ -48,6 +48,9 @@ export default function CustomizedSelects(props) {
     const classes = useStyles();
     const [item, setItem] = React.useState('1');
     const handleChange = event => {
+        if (props.onChange) {
+            props.onChange(event.target.value);
+        }
         setItem(event.target.value);
     };
 

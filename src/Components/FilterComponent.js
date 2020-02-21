@@ -10,8 +10,10 @@ export class FilterComponent extends React.Component {
         super()
         this.state = {
             ddlFlightType: [],
-            ddlTripPathType: []
+            ddlTripPathType: [],
+            tripPathType: 0
         }
+        this.OnTripPathTypeChange = this.OnTripPathTypeChange.bind(this);
     }
 
     componentDidMount() {
@@ -24,11 +26,15 @@ export class FilterComponent extends React.Component {
         })
     }
 
+    OnTripPathTypeChange(TripType) {
+        this.setState({ tripPathType: TripType })
+    }
+
     render() {
         return (
             <React.Fragment>
                 <div className="inlineFilter">
-                    <CustomizedSelects items={this.state.ddlTripPathType} />
+                    <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
                     <PassengersModal />
                     <CustomizedSelects items={this.state.ddlFlightType} />
                 </div>
@@ -37,8 +43,14 @@ export class FilterComponent extends React.Component {
                     <div className="divDateBox">
                         <DateRangeIcon className="dtmIcon" />
                         <TravelDatePicker />
-                        <span class="dtmSpan"></span>
-                        <TravelDatePicker />
+                        {
+                            Number(this.state.tripPathType) === 2 ?
+                                <div></div>
+                                : <React.Fragment>
+                                    <span className="dtmSpan"></span>
+                                    <TravelDatePicker />
+                                </React.Fragment>
+                        }
                     </div>
                 </div>
 
