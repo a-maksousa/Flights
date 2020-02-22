@@ -1,5 +1,7 @@
 import React from "react"
 import { FilterComponent } from "../Components/FilterComponent"
+import { LocationDateComponent } from "../Components/LocationDateComponent"
+import { ButtonSearchComponent } from "../Components/MaterialComponents/ButtonSearchComponent"
 
 
 export class LandingPage extends React.Component {
@@ -19,10 +21,14 @@ export class LandingPage extends React.Component {
                     <div className="col-md-1"></div>
                     <div className="col-md-10 searchCard">
                         <FilterComponent />
-                        
-                    </div>
+                        <LocationDateComponent />
+                    </div>  
                     <div className="col-md-1"></div>
                 </div>
+                <div>
+                    <ButtonSearchComponent/>
+                </div>
+               
             </div>
         )
     }

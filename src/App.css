@@ -55,7 +55,7 @@
 
 .inlineMainFilter{
   display: inline-flex;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .flights-header {
@@ -137,4 +137,28 @@
   color: #1a73e8;
   margin: 12px;
   margin-bottom: 0px;
+}
+.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]:hover
+{
+  border-color: #c4c4c4;
+}
+.btnSearch {
+  border-radius: 20px;
+  height: 40px;
+  min-width: 40px;
+  background-color: #1a73e8;
+  align-items: center;
+  /* bottom: calc(-40px/2); */
+  left: 45%;
+  margin: 0 auto;
+  position: relative;
+    right: 0;
+    border: 0;
+    bottom: 20px;
+}
+.txtSearch {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px 10px 0 6px;
 }
