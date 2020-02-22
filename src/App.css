@@ -113,11 +113,13 @@
 }
 
 .DatePicker{
+  width: 250px;
     padding: 12px;
     color: #3c4043;
     font: 400 14px/20px Roboto, HelveticaNeue, Arial, sans-serif;
     letter-spacing: 0.2px;
     border: unset;
+    height: 54px;
 }
 
 .dtmSpan{
@@ -135,7 +137,7 @@
 
 .dtmIcon{
   color: #1a73e8;
-  margin: 12px;
+  margin: 14px;
   margin-bottom: 0px;
 }
 .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]:hover
@@ -151,6 +153,8 @@
   /* bottom: calc(-40px/2); */
   left: 45%;
   margin: 0 auto;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+  outline: none !important;
   position: relative;
     right: 0;
     border: 0;

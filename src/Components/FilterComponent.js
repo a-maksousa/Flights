@@ -4,6 +4,7 @@ import CustomizedSelects from "../Components/MaterialComponents/CustomizedSelect
 import PassengersModal from "./MaterialComponents/PassengersModal"
 import { TravelDatePicker } from "./MaterialComponents/TravelDatePicker"
 import DateRangeIcon from '@material-ui/icons/DateRange';
+import { LocationDateComponent } from "../Components/LocationDateComponent"
 
 export class FilterComponent extends React.Component {
     constructor() {
@@ -39,18 +40,25 @@ export class FilterComponent extends React.Component {
                     <CustomizedSelects items={this.state.ddlFlightType} />
                 </div>
                 <br />
-                <div className="inlineMainFilter">
-                    <div className="divDateBox">
-                        <DateRangeIcon className="dtmIcon" />
-                        <TravelDatePicker />
-                        {
-                            Number(this.state.tripPathType) === 2 ?
-                                <div></div>
-                                : <React.Fragment>
-                                    <span className="dtmSpan"></span>
-                                    <TravelDatePicker />
-                                </React.Fragment>
-                        }
+                <div className="container-fluid">
+                    <div className="row inlineMainFilter">
+                        <div className="col-md-6">
+                            <LocationDateComponent />
+                        </div>
+                        <div className="col-md-6">
+                            <div className="divDateBox">
+                                <DateRangeIcon className="dtmIcon" />
+                                <TravelDatePicker />
+                                {
+                                    Number(this.state.tripPathType) === 2 ?
+                                        <div></div>
+                                        : <React.Fragment>
+                                            <span className="dtmSpan"></span>
+                                            <TravelDatePicker />
+                                        </React.Fragment>
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
 
