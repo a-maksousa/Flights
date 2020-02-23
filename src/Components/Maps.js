@@ -4,7 +4,7 @@ import React from "react"
 export class MapContainer extends React.Component {
   render() {
     return (
-      <Map google={this.props.google} zoom={14}>
+      <Map google={this.props.google} zoom={3}>
 
         <Marker onClick={this.onMarkerClick}
                 name={'Current location'} />

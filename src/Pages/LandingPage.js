@@ -7,7 +7,7 @@ export class LandingPage extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <img className="imgHeader" src="/static/images/illustration-flights-desktop.png" alt="illustration-flights-desktop.png" />

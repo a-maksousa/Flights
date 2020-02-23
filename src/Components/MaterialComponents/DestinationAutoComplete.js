@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function GoogleMaps() {
+export default function GoogleMaps(props) {
   const classes = useStyles();
   const [inputValue, setInputValue] = React.useState('');
   const [options, setOptions] = React.useState([]);
@@ -86,12 +86,14 @@ export default function GoogleMaps() {
   }, [inputValue, fetch]);
 
   return (
+    
     <Autocomplete
       id="google-map-demo"
       style={{ width: 100+'%' }}
       getOptionLabel={option => (typeof option === 'string' ? option : option.description)}
       filterOptions={x => x}
       options={options}
+      defaultValue={props.defVal}
       autoComplete
       includeInputInList
       freeSolo
@@ -99,7 +101,8 @@ export default function GoogleMaps() {
       renderInput={params => (
         <TextField
           {...params}
-        //   label="Add a location"
+          label={props.icon}
+          
           variant="outlined"
           fullWidth
           onChange={handleChange}

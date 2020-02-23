@@ -5,6 +5,9 @@ import PassengersModal from "../Components/MaterialComponents/PassengersModal"
 import { TravelDatePicker } from "../Components/MaterialComponents/TravelDatePicker"
 import DiscreteSlider from "../Components/MaterialComponents/DiscreteSlider"
 import MapContainer from "../Components/Maps"
+import MediaControlCard from "../Components/MaterialComponents/MediaControlCard"
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
 import axios from 'axios'
 
 export class FlightsMapPage extends React.Component {
@@ -42,8 +45,8 @@ export class FlightsMapPage extends React.Component {
                             <CustomizedSelects items={this.state.ddlFlightType} />
                         </div>
                         <div className="inlineMainFilter">
-                            <DestinationAutoComplete />
-                            <DestinationAutoComplete />
+                            <DestinationAutoComplete icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" />
+                            <DestinationAutoComplete icon={<LocationOnOutlinedIcon fontSize="small" />} />
                         </div>
                         <div className="inlineMainFilter">
                             <div className="divDateBox">
@@ -59,6 +62,13 @@ export class FlightsMapPage extends React.Component {
                             </div>
                         </div>
                         <DiscreteSlider />
+                        <div className="scrollableDiv">
+                            <MediaControlCard image="/static/images/cards/istanbul.jpg" title="Istanbul" price="AED 961" />
+                            <MediaControlCard image="/static/images/cards/cairo.jpg" title="Cairo" price="AED 1333" />
+                            <MediaControlCard image="/static/images/cards/aqaba.jpg" title="Aqaba" price="AED 666" />
+                            <MediaControlCard image="/static/images/cards/doha.jpg" title="Doha" price="AED 1601" />
+                            <MediaControlCard image="/static/images/cards/beirut.jpg" title="Beirut" price="AED 1041" />
+                        </div>
                     </div>
 
                     <div className="col-md-8">

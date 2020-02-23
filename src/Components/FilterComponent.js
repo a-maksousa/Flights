@@ -42,7 +42,7 @@ export class FilterComponent extends React.Component {
                 </div>
                 <br />
                 <div className="container-fluid">
-                    <div className="row inlineMainFilter">
+                    <div className="row">
                         <div className="col-md-6">
                             <LocationComponent />
                         </div>
