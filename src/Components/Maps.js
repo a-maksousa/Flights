@@ -19,6 +19,6 @@ export class MapContainer extends React.Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCjjZwwZfvVp59e3tODE6GxQh2MKtmBaZk&libraries=places"
+export default GoogleApiWrapper({               
+  apiKey: "http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyAv5ibFbQjqH003cFvA1Y-Fa-hdaCTABxM&callback=initMap"
 })(MapContainer)
