@@ -1,14 +1,14 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
-export class ButtonSearchComponent extends React.Component{
-    constructor() {
-        super()
+export function ButtonSearchComponent() {
+    const history = useHistory();
+    function handleClick() {
+        history.push("/FlightsMapPage");
     }
-    render(){
-        return (
-        <button className="btnSearch">
-            <img className="flt-fab-icon" src="../static/images/search_white_24dp.png" alt="" height="24" width="24" data-atf="1"/><span className="txtSearch">Search</span>
+    return (
+        <button className="btnSearch" onClick={handleClick}>
+            <img className="flt-fab-icon" src="../static/images/search_white_24dp.png" to="/FlightsMapPage" alt="" height="24" width="24" data-atf="1" /><span className="txtSearch">Search</span>
         </button>
-        )
-     }
- }
+    )
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { LandingPage } from "./Pages/LandingPage"
+import { FlightsMapPage } from "./Pages/FlightsMapPage"
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
               <Redirect to="/landingpage" />
             )} />
             <Route exact path='/landingpage' component={LandingPage} />
+            <Route exact path='/FlightsMapPage' component={FlightsMapPage} />
           </Switch>
         </div>
       </Router>

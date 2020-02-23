@@ -1,18 +1,18 @@
 import React from "react"
-import axios from 'axios'
+import DestinationAutoComplete from "../Components/MaterialComponents/DestinationAutoComplete"
 import CustomizedSelects from "../Components/MaterialComponents/CustomizedSelects"
-import PassengersModal from "./MaterialComponents/PassengersModal"
-import { TravelDatePicker } from "./MaterialComponents/TravelDatePicker"
-import DateRangeIcon from '@material-ui/icons/DateRange';
-import { LocationComponent } from "./LocationComponent"
+import PassengersModal from "../Components/MaterialComponents/PassengersModal"
+import { TravelDatePicker } from "../Components/MaterialComponents/TravelDatePicker"
+import DiscreteSlider from "../Components/MaterialComponents/DiscreteSlider"
+import MapContainer from "../Components/Maps"
+import axios from 'axios'
 
-export class FilterComponent extends React.Component {
+export class FlightsMapPage extends React.Component {
     constructor() {
         super()
         this.state = {
             ddlFlightType: [],
             ddlTripPathType: [],
-            tripPathType: 0
         }
         this.OnTripPathTypeChange = this.OnTripPathTypeChange.bind(this);
     }
@@ -33,21 +33,20 @@ export class FilterComponent extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
-                <div className="inlineFilter" style={{margin:20}}>
-                    <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
-                    <PassengersModal />
-                    <CustomizedSelects items={this.state.ddlFlightType} />
-                </div>
-                <br />
-                <div className="container-fluid">
-                    <div className="row inlineMainFilter">
-                        <div className="col-md-6">
-                            <LocationComponent />
+            <div className="container" style={{ marginTop: 40 }}>
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="inlineFilter" style={{ margin: 10 }}>
+                            <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
+                            <PassengersModal />
+                            <CustomizedSelects items={this.state.ddlFlightType} />
                         </div>
-                        <div className="col-md-6">
+                        <div className="inlineMainFilter">
+                            <DestinationAutoComplete />
+                            <DestinationAutoComplete />
+                        </div>
+                        <div className="inlineMainFilter">
                             <div className="divDateBox">
-                                <DateRangeIcon className="dtmIcon" />
                                 <TravelDatePicker />
                                 {
                                     Number(this.state.tripPathType) === 2 ?
@@ -59,10 +58,14 @@ export class FilterComponent extends React.Component {
                                 }
                             </div>
                         </div>
+                        <DiscreteSlider />
+                    </div>
+
+                    <div className="col-md-8">
+                        <MapContainer />
                     </div>
                 </div>
-
-            </React.Fragment>
+            </div>
         )
     }
 }
