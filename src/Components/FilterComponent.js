@@ -5,6 +5,7 @@ import PassengersModal from "./MaterialComponents/PassengersModal"
 import { TravelDatePicker } from "./MaterialComponents/TravelDatePicker"
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import { LocationComponent } from "./LocationComponent"
+import { ButtonSearchComponent } from "../Components/MaterialComponents/ButtonSearchComponent"
 
 export class FilterComponent extends React.Component {
     constructor() {
@@ -61,7 +62,9 @@ export class FilterComponent extends React.Component {
                         </div>
                     </div>
                 </div>
-
+                <div>
+                    <ButtonSearchComponent/>
+                </div>
             </React.Fragment>
         )
     }

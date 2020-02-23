@@ -1,6 +1,6 @@
 import React from "react"
 import { FilterComponent } from "../Components/FilterComponent"
-import { ButtonSearchComponent } from "../Components/MaterialComponents/ButtonSearchComponent"
+
 
 
 export class LandingPage extends React.Component {
@@ -23,10 +23,6 @@ export class LandingPage extends React.Component {
                     </div>  
                     <div className="col-md-1"></div>
                 </div>
-                <div>
-                    <ButtonSearchComponent/>
-                </div>
-               
             </div>
         )
     }
