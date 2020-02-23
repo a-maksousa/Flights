@@ -1,9 +1,8 @@
 import React from "react"
-import OriginAutoComplete from "./MaterialComponents/OriginAutoComplete"
 import DestinationAutoComplete from "./MaterialComponents/DestinationAutoComplete"
 import ButtonLRComponent  from "./MaterialComponents/ButtonLRComponent"
 
-export class LocationDateComponent extends React.Component {
+export class LocationComponent extends React.Component {
     constructor() {
         super()
     }
@@ -11,8 +10,8 @@ export class LocationDateComponent extends React.Component {
         return (
             <React.Fragment>
                 <div className="inlineMainFilter">
-                    <OriginAutoComplete />
-                   
+                    <DestinationAutoComplete />
+                    <ButtonLRComponent/>
                     <DestinationAutoComplete />
                 </div>
             </React.Fragment>

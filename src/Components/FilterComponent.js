@@ -4,7 +4,7 @@ import CustomizedSelects from "../Components/MaterialComponents/CustomizedSelect
 import PassengersModal from "./MaterialComponents/PassengersModal"
 import { TravelDatePicker } from "./MaterialComponents/TravelDatePicker"
 import DateRangeIcon from '@material-ui/icons/DateRange';
-import { LocationDateComponent } from "../Components/LocationDateComponent"
+import { LocationComponent } from "./LocationComponent"
 
 export class FilterComponent extends React.Component {
     constructor() {
@@ -43,7 +43,7 @@ export class FilterComponent extends React.Component {
                 <div className="container-fluid">
                     <div className="row inlineMainFilter">
                         <div className="col-md-6">
-                            <LocationDateComponent />
+                            <LocationComponent />
                         </div>
                         <div className="col-md-6">
                             <div className="divDateBox">
