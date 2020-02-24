@@ -211,3 +211,7 @@
   overflow-y: scroll;
   max-height: 50vh;
 }
+
+.MuiSlider-valueLabel{
+  z-index: unset !important;
+}
