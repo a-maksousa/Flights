@@ -1,25 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { CSSTransition } from 'react-transition-group'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { LandingPage } from "./Pages/LandingPage"
 import { FlightsMapPage } from "./Pages/FlightsMapPage"
 
-class App extends Component {
+const routes = [
+  { path: '/', name: 'landingpage', Component: LandingPage },
+  { path: '/landingpage', name: 'landingpage', Component: LandingPage },
+  { path: '/FlightsMapPage', name: 'FlightsMapPage', Component: FlightsMapPage }
+]
+
+class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <Switch>
-            <Route exact path="/" render={() => (
-              <Redirect to="/landingpage" />
-            )} />
-            <Route exact path='/landingpage' component={LandingPage} />
-            <Route exact path='/FlightsMapPage' component={FlightsMapPage} />
-          </Switch>
-        </div>
+        <>
+          <Container className="container">
+            {routes.map(({ path, Component }) => (
+              <Route key={path} exact path={path}>
+                {({ match }) => (
+                  <CSSTransition
+                    in={match != null}
+                    timeout={300}
+                    classNames="page"
+                    unmountOnExit
+                  >
+                    <div className="page">
+                      <Component />
+                    </div>
+                  </CSSTransition>
+                )}
+              </Route>
+            ))}
+          </Container>
+        </>
       </Router>
     );
   }
+
 }
 
 export default App;
