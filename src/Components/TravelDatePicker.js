@@ -1,29 +1,23 @@
 import React from "react";
 import DatePicker from "react-datepicker";
- 
+
 import "react-datepicker/dist/react-datepicker.css";
- 
+
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
- 
-export class TravelDatePicker extends React.Component {
-  state = {
-    startDate: new Date()
+
+export function TravelDatePicker() {
+  const [date, setDate] = React.useState(new Date());
+
+  const handleChange = date => {
+    setDate(date)
   };
- 
-  handleChange = date => {
-    this.setState({
-      startDate: date
-    });
-  };
- 
-  render() {
-    return (
-      <DatePicker className="DatePicker"
-        selected={this.state.startDate}
-        onChange={this.handleChange}
-        dateFormat="EEE, dd MMM"
-      />
-    );
-  }
+
+  return (
+    <DatePicker className="DatePicker"
+      selected={date}
+      onChange={handleChange}
+      dateFormat="EEE, dd MMM"
+    />
+  );
 }
