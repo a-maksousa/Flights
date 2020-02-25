@@ -10,12 +10,13 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
 import ReactQueryParams from 'react-query-params';
 import queryString from 'query-string'
+import AccordionComponent from '../Components/AccordionComponent'
 
 export class FilterResultsPage extends React.Component {
     constructor() {
         super()
         var obj = new ReactQueryParams()
-        
+         
         this.state = {
             ddlFlightType: [],
             ddlTripPathType: [],
@@ -90,6 +91,14 @@ export class FilterResultsPage extends React.Component {
                     </div>
                 </div>
                 <hr />
+                <div className="row">
+                    <div className="col-md-12">
+                        <h4>Departing flights</h4>
+                    </div>
+                    <div className="col-md-12">
+                      <AccordionComponent/>
+                    </div>
+                </div>
             </div>
         )
     }

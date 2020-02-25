@@ -255,3 +255,31 @@
 .MuiInputBase-input{
   margin-left: 10px !important;
 }
+.shadow{
+  border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
+}
+.flexwidth{
+  flex-basis: 25%;
+}
+.icon{
+  height: 35px;
+  width: 35px;
+  margin-right: 10px
+}
+.heading {
+  font-size: 15px,
+}
+.bold{
+  font-weight: bold;
+}
+.secondaryHeading{
+  font-size: 12px;
+  color: gray;
+}
+.txtRight{
+  text-align: right;
+}
+.txtCenter{
+  text-align: center;
+}
