@@ -48,6 +48,9 @@ export default function GoogleMaps(props) {
   }
 
   const handleChange = event => {
+    if (props.onSelect) {
+      props.onSelect(event.target.value)
+    }
     setInputValue(event.target.value);
   };
 
@@ -86,10 +89,10 @@ export default function GoogleMaps(props) {
   }, [inputValue, fetch]);
 
   return (
-    
+
     <Autocomplete
       id="google-map-demo"
-      style={{ width: 100+'%' }}
+      style={{ width: 100 + '%' }}
       getOptionLabel={option => (typeof option === 'string' ? option : option.description)}
       filterOptions={x => x}
       options={options}
@@ -102,10 +105,11 @@ export default function GoogleMaps(props) {
         <TextField
           {...params}
           label={props.icon}
-          
+
           variant="outlined"
           fullWidth
           onChange={handleChange}
+          onSelect={handleChange}
         />
       )}
       renderOption={option => {

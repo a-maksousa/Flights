@@ -3,26 +3,27 @@ import axios from 'axios'
 import CustomizedSelects from "../Components/CustomizedSelects"
 import PassengersModal from "../Components/PassengersModal"
 import { TravelDatePicker } from "../Components/TravelDatePicker"
-import { ButtonSearchComponent } from "../Components/ButtonSearchComponent"
 import DestinationAutoComplete from "../Components/DestinationAutoComplete"
 import ButtonLRComponent from "../Components/ButtonLRComponent"
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
+import ReactQueryParams from 'react-query-params';
+import queryString from 'query-string'
 
-
-
-export class LandingPage extends React.Component {
-
+export class FilterResultsPage extends React.Component {
     constructor() {
         super()
+        var obj = new ReactQueryParams()
+        
         this.state = {
             ddlFlightType: [],
             ddlTripPathType: [],
             tripPathType: 0,
-            destinationWhereTo: "",
+            destinationWhereTo: decodeURIComponent(obj.queryParams.destinationWhereTo),
             originWhereFrom: ""
         }
+
         this.OnTripPathTypeChange = this.OnTripPathTypeChange.bind(this);
         this.onDestinationAutoCompleteSelect = this.onDestinationAutoCompleteSelect.bind(this);
         this.onOriginAutoCompleteSelect = this.onOriginAutoCompleteSelect.bind(this);
@@ -52,18 +53,9 @@ export class LandingPage extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container" style={{ marginTop: 40 }}>
                 <div className="row">
                     <div className="col-md-12">
-                        <img className="imgHeader" src="/static/images/illustration-flights-desktop.png" alt="illustration-flights-desktop.png" />
-                        <div className="flights-header">
-                            <h1 className="flights-header-txt">Flights</h1>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-1"></div>
-                    <div className="col-md-10 searchCard">
                         <div className="inlineFilter" style={{ margin: 20 }}>
                             <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
                             <PassengersModal />
@@ -76,7 +68,7 @@ export class LandingPage extends React.Component {
                                     <div className="inlineMainFilter">
                                         <DestinationAutoComplete onSelect={this.onOriginAutoCompleteSelect} icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" />
                                         <ButtonLRComponent />
-                                        <DestinationAutoComplete onSelect={this.onDestinationAutoCompleteSelect} icon={<LocationOnOutlinedIcon fontSize="small" />} />
+                                        <DestinationAutoComplete onSelect={this.onDestinationAutoCompleteSelect} icon={<LocationOnOutlinedIcon fontSize="small" />} defVal={this.state.destinationWhereTo} />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -95,12 +87,9 @@ export class LandingPage extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <ButtonSearchComponent destinationWhereTo={this.state.destinationWhereTo} />
-                        </div>
                     </div>
-                    <div className="col-md-1"></div>
                 </div>
+                <hr />
             </div>
         )
     }

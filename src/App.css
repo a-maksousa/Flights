@@ -251,3 +251,7 @@
 }
 
 /* Animated Transition */
+
+.MuiInputBase-input{
+  margin-left: 10px !important;
+}

@@ -5,11 +5,13 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { LandingPage } from "./Pages/LandingPage"
 import { FlightsMapPage } from "./Pages/FlightsMapPage"
+import { FilterResultsPage } from "./Pages/FilterResultsPage"
 
 const routes = [
   { path: '/', name: 'landingpage', Component: LandingPage },
   { path: '/landingpage', name: 'landingpage', Component: LandingPage },
-  { path: '/FlightsMapPage', name: 'FlightsMapPage', Component: FlightsMapPage }
+  { path: '/FlightsMapPage', name: 'FlightsMapPage', Component: FlightsMapPage },
+  { path: '/FilterResultsPage', name: 'FilterResultsPage', Component: FilterResultsPage }
 ]
 
 class App extends React.Component {
@@ -26,6 +28,7 @@ class App extends React.Component {
                     timeout={300}
                     classNames="page"
                     unmountOnExit
+                    
                   >
                     <div className="page">
                       <Component />

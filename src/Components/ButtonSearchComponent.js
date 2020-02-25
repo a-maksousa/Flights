@@ -1,10 +1,20 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
+import ReactQueryParams from 'react-query-params';
 
-export function ButtonSearchComponent() {
+export function ButtonSearchComponent(props) {
     const history = useHistory();
     function handleClick() {
-        history.push("/FlightsMapPage");
+        if (props.destinationWhereTo === "") {
+            history.push("/FlightsMapPage");
+        }
+        else {
+            history.push("/FilterResultsPage");
+            var obj = new ReactQueryParams()
+            obj.setQueryParams({
+                destinationWhereTo: props.destinationWhereTo
+            });
+        }
     }
     return (
         <button className="btnSearch" onClick={handleClick}>

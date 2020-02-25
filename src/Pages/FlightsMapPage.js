@@ -1,11 +1,11 @@
 import React from "react"
-import DestinationAutoComplete from "../Components/MaterialComponents/DestinationAutoComplete"
-import CustomizedSelects from "../Components/MaterialComponents/CustomizedSelects"
-import PassengersModal from "../Components/MaterialComponents/PassengersModal"
-import { TravelDatePicker } from "../Components/MaterialComponents/TravelDatePicker"
-import DiscreteSlider from "../Components/MaterialComponents/DiscreteSlider"
+import DestinationAutoComplete from "../Components/DestinationAutoComplete"
+import CustomizedSelects from "../Components/CustomizedSelects"
+import PassengersModal from "../Components/PassengersModal"
+import { TravelDatePicker } from "../Components/TravelDatePicker"
+import DiscreteSlider from "../Components/DiscreteSlider"
 import MapContainer from "../Components/Maps"
-import MediaControlCard from "../Components/MaterialComponents/MediaControlCard"
+import MediaControlCard from "../Components/MediaControlCard"
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
 import axios from 'axios'
