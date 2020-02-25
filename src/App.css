@@ -256,6 +256,7 @@
   margin-left: 10px !important;
 }
 .shadow{
+  margin-top: 20px;
   border-radius: 8px;
     box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
 }

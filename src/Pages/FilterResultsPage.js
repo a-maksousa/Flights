@@ -9,20 +9,53 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
 import ReactQueryParams from 'react-query-params';
-import queryString from 'query-string'
 import AccordionComponent from '../Components/AccordionComponent'
 
 export class FilterResultsPage extends React.Component {
     constructor() {
         super()
         var obj = new ReactQueryParams()
-         
+
+        const lstResult = [
+            {
+                icon: "https://www.gstatic.com/flights/airline_logos/70px/RJ.png",
+                time: "07:00 – 08:30",
+                airport: "Royal Jordanian",
+                duration: "2 h 50 m",
+                iata: "AMM-DXB",
+                flightType: "Non-stop",
+                price: "AED 1,391",
+                flightPathType: "round trip"
+            },
+            {
+                icon: "https://www.gstatic.com/flights/airline_logos/70px/EK.png",
+                time: "11:15 – 16:05",
+                airport: "Emirates",
+                duration: "3 h 30 m",
+                iata: "AMM-DXB",
+                flightType: "Non-stop",
+                price: "AED 1,412",
+                flightPathType: "round trip"
+            },
+            {
+                icon: "https://www.gstatic.com/flights/airline_logos/70px/FZ.png",
+                time: "21:35 – 02:35",
+                airport: "flydubai",
+                duration: "3 h 0 m",
+                iata: "AMM-DXB",
+                flightType: "Non-stop",
+                price: "AED 1,428",
+                flightPathType: "round trip"
+            }
+        ]
+
         this.state = {
             ddlFlightType: [],
             ddlTripPathType: [],
             tripPathType: 0,
             destinationWhereTo: decodeURIComponent(obj.queryParams.destinationWhereTo),
-            originWhereFrom: ""
+            originWhereFrom: "",
+            lstResult: lstResult
         }
 
         this.OnTripPathTypeChange = this.OnTripPathTypeChange.bind(this);
@@ -53,6 +86,7 @@ export class FilterResultsPage extends React.Component {
     }
 
     render() {
+
         return (
             <div className="container" style={{ marginTop: 40 }}>
                 <div className="row">
@@ -93,10 +127,10 @@ export class FilterResultsPage extends React.Component {
                 <hr />
                 <div className="row">
                     <div className="col-md-12">
-                        <h4>Departing flights</h4>
+                        <h4>Departing Flights</h4>
                     </div>
                     <div className="col-md-12">
-                      <AccordionComponent/>
+                        <AccordionComponent lstResult={this.state.lstResult} />
                     </div>
                 </div>
             </div>
