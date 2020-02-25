@@ -74,9 +74,9 @@ export class LandingPage extends React.Component {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="inlineMainFilter">
-                                        <DestinationAutoComplete onSelect={this.onOriginAutoCompleteSelect} icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" />
+                                        <DestinationAutoComplete onSelect={this.onOriginAutoCompleteSelect} icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" placeholder="Where from ?"/>
                                         <ButtonLRComponent />
-                                        <DestinationAutoComplete onSelect={this.onDestinationAutoCompleteSelect} icon={<LocationOnOutlinedIcon fontSize="small" />} />
+                                        <DestinationAutoComplete onSelect={this.onDestinationAutoCompleteSelect} icon={<LocationOnOutlinedIcon fontSize="small" />} placeholder="Where to ?" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">

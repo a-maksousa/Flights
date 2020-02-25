@@ -105,7 +105,7 @@ export default function GoogleMaps(props) {
         <TextField
           {...params}
           label={props.icon}
-
+          placeholder= {props.placeholder}
           variant="outlined"
           fullWidth
           onChange={handleChange}

@@ -45,8 +45,8 @@ export class FlightsMapPage extends React.Component {
                             <CustomizedSelects items={this.state.ddlFlightType} />
                         </div>
                         <div className="inlineMainFilter">
-                            <DestinationAutoComplete icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" />
-                            <DestinationAutoComplete icon={<LocationOnOutlinedIcon fontSize="small" />} />
+                            <DestinationAutoComplete icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" placeholder="Where from ?"/>
+                            <DestinationAutoComplete icon={<LocationOnOutlinedIcon fontSize="small" />} placeholder="Where to ?"/>
                         </div>
                         <div className="inlineMainFilter">
                             <div className="divDateBox">
