@@ -1,7 +1,7 @@
 import React from "react"
 import DestinationAutoComplete from "../Components/DestinationAutoComplete"
 import CustomizedSelects from "../Components/CustomizedSelects"
-import PassengersModal from "../Components/PassengersModal"
+import PassengersFilterModal from "../Components/PassengersFilterModal"
 import { TravelDatePicker } from "../Components/TravelDatePicker"
 import DiscreteSlider from "../Components/DiscreteSlider"
 import MapContainer from "../Components/Maps"
@@ -41,7 +41,7 @@ export class FlightsMapPage extends React.Component {
                     <div className="col-md-4">
                         <div className="inlineFilter" style={{ margin: 10 }}>
                             <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
-                            <PassengersModal />
+                            <PassengersFilterModal />
                             <CustomizedSelects items={this.state.ddlFlightType} />
                         </div>
                         <div className="inlineMainFilter">

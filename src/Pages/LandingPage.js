@@ -1,7 +1,7 @@
 import React from "react"
 import axios from 'axios'
 import CustomizedSelects from "../Components/CustomizedSelects"
-import PassengersModal from "../Components/PassengersModal"
+import PassengersFilterModal from "../Components/PassengersFilterModal"
 import { TravelDatePicker } from "../Components/TravelDatePicker"
 import { ButtonSearchComponent } from "../Components/ButtonSearchComponent"
 import DestinationAutoComplete from "../Components/DestinationAutoComplete"
@@ -66,7 +66,7 @@ export class LandingPage extends React.Component {
                     <div className="col-md-10 searchCard">
                         <div className="inlineFilter" style={{ margin: 20 }}>
                             <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
-                            <PassengersModal />
+                            <PassengersFilterModal />
                             <CustomizedSelects items={this.state.ddlFlightType} />
                         </div>
                         <br />
