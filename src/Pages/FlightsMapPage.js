@@ -9,6 +9,7 @@ import MediaControlCard from "../Components/MediaControlCard"
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
 import axios from 'axios'
+import Typography from '@material-ui/core/Typography';
 
 export class FlightsMapPage extends React.Component {
     constructor() {
@@ -39,14 +40,14 @@ export class FlightsMapPage extends React.Component {
             <div className="container" style={{ marginTop: 40 }}>
                 <div className="row">
                     <div className="col-md-4">
-                        <div className="inlineFilter" style={{ margin: 10 }}>
+                        <div className="inlineFilter" style={{ margin: "20px 0px 20px 0px" }}>
                             <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
                             <PassengersFilterModal />
                             <CustomizedSelects items={this.state.ddlFlightType} />
                         </div>
                         <div className="inlineMainFilter">
-                            <DestinationAutoComplete icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" placeholder="Where from ?"/>
-                            <DestinationAutoComplete icon={<LocationOnOutlinedIcon fontSize="small" />} placeholder="Where to ?"/>
+                            <DestinationAutoComplete icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" placeholder="Where from ?" />
+                            <DestinationAutoComplete icon={<LocationOnOutlinedIcon fontSize="small" />} placeholder="Where to ?" />
                         </div>
                         <div className="inlineMainFilter">
                             <div className="divDateBox">
@@ -61,6 +62,7 @@ export class FlightsMapPage extends React.Component {
                                 }
                             </div>
                         </div>
+                        <Typography id="discrete-slider-always" gutterBottom>Price</Typography>
                         <DiscreteSlider />
                         <div className="scrollableDiv">
                             <MediaControlCard image="/static/images/cards/istanbul.jpg" title="Istanbul" price="AED 961" />

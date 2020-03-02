@@ -4,17 +4,17 @@ import Form from 'react-bootstrap/Form'
 
 export default function PassengersModal() {
     return (
-        <GenericModal btnName="Passengers">
+        <GenericModal btnClass="btnLink" modalName="Passengers" controls={true}>
             <div class="container-fluid">
                 <div class="divPassFilter row">
-                    <div class="lblPassenger col-md-6">Adults</div>
+                    <div class="lblModal col-md-6">Adults</div>
                     <div class="col-md-4">
                         <Form.Control type="number" defaultValue="1" id="adults-number-input" min="1"
                             max="9" />
                     </div>
                 </div>
                 <div class="divPassFilter row">
-                    <div class="lblPassenger col-md-6">
+                    <div class="lblModal col-md-6">
                         Children
                                 <span class="lblSubPassenger">Aged 2-12</span>
                     </div>
@@ -24,7 +24,7 @@ export default function PassengersModal() {
                     </div>
                 </div>
                 <div class="divPassFilter row">
-                    <div class="lblPassenger col-md-6">
+                    <div class="lblModal col-md-6">
                         Infants
                                 <span class="lblSubPassenger">In seat</span>
                     </div>
@@ -34,7 +34,7 @@ export default function PassengersModal() {
                     </div>
                 </div>
                 <div class="divPassFilter row">
-                    <div class="lblPassenger col-md-6">
+                    <div class="lblModal col-md-6">
                         Infants
                                 <span class="lblSubPassenger">On lap</span>
                     </div>

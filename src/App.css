@@ -78,6 +78,7 @@
   text-decoration: none !important;
   border-radius: 5px;
   padding: 0px !important;
+  display: flex !important;
 }
 
 .btnLink:hover {
@@ -89,12 +90,39 @@
   color: #333;
 }
 
-.lblPassenger {
+.btnSubLink{
+  outline: none !important;
+  text-decoration: none !important;
+    color: rgb(51, 51, 51) !important;
+    align-items: center !important;
+    border: 1px solid #dadce0 !important;
+    border-radius: 18px !important;
+    display: inline-flex !important;
+    height: 36px !important;
+    overflow: hidden !important;
+    padding: 0px 12px 0px 12px !important;
+    margin-right: 10px ;
+    white-space: nowrap;
+}
+
+.btnSubLink:hover{
+  background-color: #f8f9fa;
+}
+
+.lblModal {
   align-self: center;
   font-size: 16px;
   flex-grow: 1;
   margin: 0 8px;
   min-width: 76px;
+}
+.lblModalHeader{
+  margin-bottom: 15px;
+  color: #3c4043;
+  font: 500 16px/24px "Google Sans", Roboto, HelveticaNeue, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: normal;
 }
 .lblSubPassenger {
   color: rgba(0,0,0,.56);
@@ -135,6 +163,7 @@
     padding: 0px;
     border-radius: 4px;
     display: inline-flex;
+    width: 100%;
 }
 
 .dtmIcon{
@@ -283,4 +312,10 @@
 }
 .txtCenter{
   text-align: center;
+}
+.react-datepicker-wrapper{
+  width: 100%;
+}
+.MuiButtonBase-root{
+  outline: none !important;
 }

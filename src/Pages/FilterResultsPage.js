@@ -10,7 +10,12 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
 import ReactQueryParams from 'react-query-params';
 import AccordionComponent from '../Components/AccordionComponent'
-
+import BagsFilterModal from "../Components/BagsFilterModal"
+import StopsFilterModal from "../Components/StopsFilterModal"
+import AirlinesFilterModal from "../Components/AirlinesFilterModal"
+import PriceFilterModal from "../Components/PriceFilterModal"
+import TimesFilterComponent from "../Components/TimesFilterComponent"
+import ConnectingAirportsFilterModal from "../Components/ConnectingAirportsFilterModal"
 export class FilterResultsPage extends React.Component {
     constructor() {
         super()
@@ -91,7 +96,7 @@ export class FilterResultsPage extends React.Component {
             <div className="container" style={{ marginTop: 40 }}>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="inlineFilter" style={{ margin: 20 }}>
+                        <div className="inlineFilter" style={{  margin: "20px 0px 20px 0px", paddingLeft: 5  }}>
                             <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
                             <PassengersFilterModal />
                             <CustomizedSelects items={this.state.ddlFlightType} />
@@ -121,6 +126,18 @@ export class FilterResultsPage extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="inlineFilter" style={{ marginLeft: 20, marginTop: 20, float: "right", maxWidth:"100%", overflowX:"auto" }}>
+                            <BagsFilterModal />
+                            <StopsFilterModal />
+                            <AirlinesFilterModal />
+                            <PriceFilterModal />
+                            <TimesFilterComponent originWhereFrom="Amman" destinationWhereTo={this.state.destinationWhereTo} />
+                            <ConnectingAirportsFilterModal />
                         </div>
                     </div>
                 </div>

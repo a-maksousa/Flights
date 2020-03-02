@@ -64,7 +64,7 @@ export class LandingPage extends React.Component {
                 <div className="row">
                     <div className="col-md-1"></div>
                     <div className="col-md-10 searchCard">
-                        <div className="inlineFilter" style={{ margin: 20 }}>
+                        <div className="inlineFilter" style={{ margin: "20px 0px 20px 0px", paddingLeft: 5 }}>
                             <CustomizedSelects items={this.state.ddlTripPathType} onChange={this.OnTripPathTypeChange} />
                             <PassengersFilterModal />
                             <CustomizedSelects items={this.state.ddlFlightType} />
@@ -74,7 +74,7 @@ export class LandingPage extends React.Component {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="inlineMainFilter">
-                                        <DestinationAutoComplete onSelect={this.onOriginAutoCompleteSelect} icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" placeholder="Where from ?"/>
+                                        <DestinationAutoComplete onSelect={this.onOriginAutoCompleteSelect} icon={<FiberManualRecordOutlinedIcon fontSize="small" />} defVal="Amman, Jordan" placeholder="Where from ?" />
                                         <ButtonLRComponent />
                                         <DestinationAutoComplete onSelect={this.onDestinationAutoCompleteSelect} icon={<LocationOnOutlinedIcon fontSize="small" />} placeholder="Where to ?" />
                                     </div>
@@ -101,6 +101,7 @@ export class LandingPage extends React.Component {
                     </div>
                     <div className="col-md-1"></div>
                 </div>
+                
             </div>
         )
     }

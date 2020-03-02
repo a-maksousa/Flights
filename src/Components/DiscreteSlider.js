@@ -18,9 +18,6 @@ export default function DiscreteSlider() {
     return (
         <div className={classes.root}>
             <div className={classes.margin} />
-            <Typography id="discrete-slider-always" gutterBottom>
-                Price
-      </Typography>
             <Slider
                 defaultValue={80}
                 aria-labelledby="discrete-slider-always"
