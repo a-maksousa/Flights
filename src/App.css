@@ -293,8 +293,8 @@
   flex-basis: 25%;
 }
 .icon{
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   margin-right: 10px
 }
 .heading {
@@ -318,4 +318,29 @@
 }
 .MuiButtonBase-root{
   outline: none !important;
+}
+
+.MuiAutocomplete-popper{
+  width: 320px!important;
+}
+@media only screen and (max-width: 760px) {
+.react-datepicker-popper{
+  transform: none!important;
+}
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle{
+  margin-top: 0!important;
+}
+.MuiExpansionPanelSummary-content{
+  display:block!important;
+  text-align: center!important;
+}
+.txtRight {
+  text-align: center!important;
+}
+.flights-header-txt{
+  font: 400 40px/0px 'Google Sans Display',Roboto,Arial,sans-serif
+}
+.maphight{
+  min-height: 700px;
+}
 }

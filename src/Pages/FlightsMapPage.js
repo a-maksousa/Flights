@@ -73,7 +73,7 @@ export class FlightsMapPage extends React.Component {
                         </div>
                     </div>
 
-                    <div className="col-md-8">
+                    <div className="col-md-8 maphight">
                         <MapContainer />
                     </div>
                 </div>
