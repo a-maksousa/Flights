@@ -32,7 +32,7 @@ export default function GenericModal(props) {
                     </div>
                 </Modal.Body>
                 {
-                    props.controls == true ?
+                    props.controls === true ?
                         <Modal.Footer>
                             <Button type="button" className="btnLink" variant="link" onClick={() => setSmShow(false)}
                                 style={{ color: "rgba(0,0,0,.56)", fontWeight: "bold" }}>Close</Button>

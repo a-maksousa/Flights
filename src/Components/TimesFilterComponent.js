@@ -48,10 +48,6 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function valuetext(value) {
-    return `${value}°C`;
-}
-
 export default function TimesFilterComponent(props) {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);

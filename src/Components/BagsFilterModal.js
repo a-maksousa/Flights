@@ -12,7 +12,7 @@ export default function BagsFilterModal() {
     return (
         <GenericModal btnClass="btnSubLink" modalName="Bags" controls={false}>
 
-            <div class="lblModal">Carry-on bag</div>
+            <div className="lblModal">Carry-on bag</div>
             <br/>
             <Form.Control type="number" onChange={handleChange} defaultValue={bags} id="adults-number-input" min="0" max="1" />
 

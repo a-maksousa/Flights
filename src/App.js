@@ -1,6 +1,6 @@
 import React from 'react'
 import { CSSTransition } from 'react-transition-group'
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Container} from 'react-bootstrap'
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { LandingPage } from "./Pages/LandingPage"
