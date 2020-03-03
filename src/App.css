@@ -50,7 +50,9 @@
 }
 
 .inlineFilter{
-  display: inline-flex;
+  display: flex;
+  text-overflow: ellipsis;
+  overflow: auto;
 }
 
 .inlineMainFilter{
