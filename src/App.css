@@ -223,14 +223,12 @@
   box-sizing: border-box;
   height: 40px;
   position: relative;
-  -webkit-transition: background-color 150ms ease 0ms;
   width: 40px;z-index: 1;
   border: solid #ccc 1px;
 }
 .btnLRsvg{
   display: block;
   height: 21px;
-  -webkit-transition: transform 150ms ease 0ms;
   width: 30px;
   margin-top: 2px;
 }
